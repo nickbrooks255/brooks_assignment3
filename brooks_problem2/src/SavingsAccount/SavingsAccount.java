@@ -11,36 +11,27 @@ class SavingsAccount {
  
 
 
-  /*  public SavingsAccount(double d) {
-		// TODO Auto-generated constructor stub
-	} */
 
 	//main
     public static void main(String[] args) {
 		
 	}
     
-  /* public SavingsAccount(double savingsBalance)
-   {
-	   //keyword this is used because we are passing the variable used inside this method as an argument for this method as noted from stackoverflow user Donal Boyle
-	   this.savingsBalance = savingsBalance; 
-   } */
-   
- 
 
-public SavingsAccount(double savingsBalance) {
-	// TODO Auto-generated constructor stub
-	this.savingsBalance = savingsBalance;
-}
-
-public void calculateMonthlyInterest() {
-	   //calculates monthlyInterest based on savingsBalance multiplied by the annualInterest rate divided by 12
-	   monthlyInterest = (savingsBalance * annualInterestRate) / 12;
+	  
+	public SavingsAccount(double savingsBalance) {
+		
+		this.savingsBalance = savingsBalance;
+	}
+	
+	public void calculateMonthlyInterest() {
+		   //calculates monthlyInterest based on savingsBalance multiplied by the annualInterest rate divided by 12
+		   monthlyInterest = (savingsBalance * annualInterestRate) / 12;
+		   
+		   //calculates new savings
+		   savingsBalance += monthlyInterest;
+	   }
 	   
-	   //calculates new savings
-	   savingsBalance += monthlyInterest;
-   }
-   
    public static void modifyInterestRate( double newRate ) {
 	   //sets annualInterestRate to a new value
 	   annualInterestRate = newRate;

@@ -2,6 +2,8 @@ import java.security.SecureRandom;
 import java.util.Random;
 import java.util.Scanner;
 
+//for CA5, all ints have been changed to doubles to correctly calculate/enter division problems specifically, but works for each kind of problem
+
 public class CA5 {
 	public static void main(String[] args) {
 		quiz();
@@ -22,12 +24,13 @@ public class CA5 {
 		//Scanner scan;
 		double probType = readProblemType();
 		
+		
 		SecureRandom mixRand = new SecureRandom();
 		
 		
 		//for loop to create a total of 20 one-digit integers, 10 firstNum ints and 10 secondNum ints to pair together, creating a total of 10 problems to solve
 		for(double i = 0; i <11; i++) {
-			//generating the two integers based on difficulty level chosen via generateQuestionArgument()
+			//generating the two doubles based on difficulty level chosen via generateQuestionArgument()
 			double firstNum = generateQuestionArgument(rand, difficulty);
 			double secondNum = generateQuestionArgument(rand, difficulty);
 			double correctAnswer = 0;
